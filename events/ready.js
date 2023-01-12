@@ -1,4 +1,4 @@
-const { Client, Intents, MessageEmbed, MessageActionRow, MessageButton, Interaction } = require('discord.js');
+const { Client, Interaction, ActivityType } = require('discord.js');
 const Discord = require('discord.js');
 const db = require('quick.db');
 const { prefix } = require('../json/config.json');
@@ -13,6 +13,6 @@ module.exports = {
       .reduce((a, b) => a + b.memberCount, 0)
       .toLocaleString()}`).yellow, (`Commands: ${client.commands.size}`).green);
       client.user.setStatus("online") 
-      client.user.setActivity(`${prefix}help | SlashCommand`, { type: 'LISTENING' })
+      client.user.setActivity(`${prefix}help | SlashCommand`, { type: ActivityType.Listening })
       }
 };
