@@ -1,5 +1,4 @@
 const { Client, Interaction, ActivityType } = require('discord.js');
-const Discord = require('discord.js');
 const db = require('quick.db');
 const { prefix } = require('../json/config.json');
 const { joinVoiceChannel } = require('@discordjs/voice');
